@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrintServiceTest"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/posInfoDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+
+        <TextView
+            android:id="@+id/posInfoAgentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2"/>
+
+        <TextView
+            android:id="@+id/posInfoCustomerID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+
+        <TextView
+            android:id="@+id/posInfoPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4"/>
+
+
+        <TextView
+            android:id="@+id/posAgentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5"/>
+
+        <TextView
+            android:id="@+id/posInfoPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6"/>
+
+        <TextView
+            android:id="@+id/posInfoPackageBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7"/>
+
+
+        <TextView
+            android:id="@+id/posInfoPaidBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8"/>
+
+        <TextView
+            android:id="@+id/posInfoDueBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9"/>
+
+        <TextView
+            android:id="@+id/posInfoCDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"/>
+
+        <TextView
+            android:id="@+id/posInfoReceivedBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/printBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print Something"/>
+
+
+</LinearLayout>

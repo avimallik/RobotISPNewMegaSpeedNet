@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AgentInfo">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!-- CollapsingToolbarLayout for collapsing content -->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="16dp"
+                app:expandedTitleMarginStart="16dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@android:color/transparent"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.Material3.Light">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="50">
+
+                                <TextView
+                                    android:id="@+id/toolbar_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/abeezee"
+                                    android:text="Complain Entry"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="50">
+                                <!-- Login image on the right -->
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="50"
+                                    android:contentDescription="Login"
+                                    android:padding="8dp"
+                                    app:srcCompat="@drawable/complain_ico_white" />
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.Toolbar>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- NestedScrollView for content -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+<!--Customer list-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/abeezee"
+                                android:paddingBottom="3dp"
+                                android:text="Customer*"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/customerSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:background="@drawable/textview_back"
+                                android:fontFamily="@font/abeezee"
+                                android:hint="Select"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="8dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="8dp"
+                                android:layout_marginTop="3dp"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/customerIDTxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="5sp"
+                                android:hint="0"
+                                android:gravity="right"/>
+
+
+                        </LinearLayout>
+<!--Complain type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/abeezee"
+                                android:paddingBottom="3dp"
+                                android:text="Complain Template"
+                                android:layout_marginTop="5dp"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/complainTypeSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:background="@drawable/textview_back"
+                                android:fontFamily="@font/abeezee"
+                                android:hint="Select"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="8dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="8dp"
+                                android:layout_marginTop="3dp"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/complainTypeIDText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="5sp"
+                                android:hint="0"
+                                android:gravity="right"
+                                android:layout_marginTop="5dp"/>
+
+
+                        </LinearLayout>
+<!--Priority-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/abeezee"
+                            android:text="Priority"
+                            android:textSize="15sp"
+                            android:visibility="gone"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginTop="5dp"
+                            android:elevation="10dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:visibility="gone">
+                            <Spinner
+                                android:id="@+id/spinnerPriority"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                android:entries="@array/spinner_priority"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <EditText
+                            android:id="@+id/complainDetailsText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:drawable/editbox_background_normal"
+                            android:focusable="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="top|start"
+                            android:hint="Complain details"
+                            android:inputType="textMultiLine"
+                            android:minLines="3"
+                            android:scrollbars="vertical"
+                            android:scrollHorizontally="false"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/complainNoteText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:drawable/editbox_background_normal"
+                            android:focusable="true"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="top|start"
+                            android:hint="Note"
+                            android:inputType="textMultiLine"
+                            android:minLines="3"
+                            android:scrollbars="vertical"
+                            android:scrollHorizontally="false"
+                            android:textSize="15sp" />
+
+                        <!--Complain type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/abeezee"
+                                android:paddingBottom="3dp"
+                                android:text="Employee for solve"
+                                android:layout_marginTop="5dp"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/employeeSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:background="@drawable/textview_back"
+                                android:fontFamily="@font/abeezee"
+                                android:hint="Select"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="8dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="8dp"
+                                android:layout_marginTop="3dp"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/employeeIdText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="5sp"
+                                android:hint="0"
+                                android:gravity="right"
+                                android:layout_marginTop="5dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Press + to select multiple support employees"
+                            android:textSize="15sp"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:visibility="gone">
+
+                            <Button
+                                android:id="@+id/employeeAddBtn"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:textSize="20sp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:layout_weight="30"
+                                android:textColor="@color/white"/>
+
+                            <com.google.android.material.chip.ChipGroup
+                                android:id="@+id/chipGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/selectedIdsTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:hint="0,0"
+                            android:textSize="5sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/smsCheck"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:fontFamily="@font/abeezee"
+                                android:text="SMS Notification"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/employeeCheck"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="3dp"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:fontFamily="@font/abeezee"
+                                android:text="Assigned Employee"
+                                android:textSize="15sp"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/complainPostBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Post a complain"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

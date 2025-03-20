@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/user_ico_green"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:padding="3dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/agNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Agent name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/cus_id"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:fontFamily="@font/abeezee"-->
+                <!--                    android:layout_marginTop="3dp"-->
+                <!--                    android:text="cus111"-->
+                <!--                    android:textSize="13sp"-->
+                <!--                    android:layout_marginRight="10dp"-->
+                <!--                    android:layout_marginBottom="5dp"/>-->
+
+                <TextView
+                    android:id="@+id/agIPTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:hint="k-AAA"
+                    android:textSize="14sp"
+                    android:layout_marginTop="3dp"/>
+                <TextView
+                    android:id="@+id/agMobileTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:hint="019XXXXXX"
+                    android:textSize="14sp"
+                    android:layout_marginTop="3dp"/>
+                <TextView
+                    android:id="@+id/agIdTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/abeezee"
+                    android:text="0"
+                    android:gravity="right"
+                    android:textSize="8sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

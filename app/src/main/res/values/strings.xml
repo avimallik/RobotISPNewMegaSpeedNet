@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Mega Speed Net</string>
+    <!--    <string name="app_name">Roms Network</string>-->
+    <string name="company_title"><b>Mega Speed Net</b></string>
+
+    <string-array name="spinner_client_type">
+        <item>Cat5e</item>
+        <item>Optical Fiber</item>
+        <item>Onu</item>
+    </string-array>
+
+    <string-array name="spinner_connection_type">
+        <item>Cat5e</item>
+        <item>Optical Fiber</item>
+        <item>Onu</item>
+    </string-array>
+
+    <string-array name="spinner_status">
+        <item>Active</item>
+        <item>Inactive</item>
+    </string-array>
+
+    <string-array name="spinner_gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="spinner_priority">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+
+    <string-array name="spinner_complain_status">
+        <item>Select</item>
+        <item>Pending</item>
+        <item>Reviewed</item>
+        <item>Solved</item>
+    </string-array>
+
+</resources>

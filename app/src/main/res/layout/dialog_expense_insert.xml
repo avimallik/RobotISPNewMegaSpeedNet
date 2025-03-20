@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/diag_exp_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/textview_back"
+        android:fontFamily="@font/abeezee"
+        android:hint="Select account head"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#3C3F41"
+        android:textSize="16sp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"/>
+
+    <TextView
+        android:id="@+id/acc_head_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="10dp"
+        android:textSize="8dp"/>
+
+    <TextView
+        android:id="@+id/diag_exp_sub_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:background="@drawable/textview_back"
+        android:fontFamily="@font/abeezee"
+        android:hint="Select account Sub-head"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#3C3F41"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/acc_sub_head_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="10dp"
+        android:textSize="8dp"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/diag_exp_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView11"
+            android:fontFamily="@font/abeezee"
+            android:hint="Amount"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#3C3F41"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/diag_exp_amount"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Description"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="4dp"/>
+
+        <EditText
+            android:id="@+id/diag_exp_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView11"
+            android:fontFamily="@font/abeezee"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#3C3F41"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/diag_exp_insert"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/abeezee"
+            android:text="Add Expense"
+            android:textColor="#FAFAFA" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

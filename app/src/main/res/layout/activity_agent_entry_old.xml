@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".AgentEntryOld">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <!-- CollapsingToolbarLayout for collapsing content -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="16dp"
+            app:expandedTitleMarginStart="16dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.Material3.Light">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="50">
+
+                            <TextView
+                                android:id="@+id/toolbar_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/abeezee"
+                                android:text="Customer Entry"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="50">
+
+                            <!-- Login image on the right -->
+                            <ImageView
+                                android:id="@+id/clenAgentEntryInputBtn"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="50"
+                                android:contentDescription="Login"
+                                android:padding="8dp"
+                                app:srcCompat="@drawable/broom_clean_white_ico"
+                                android:foreground="?attr/selectableItemBackground"/>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.Toolbar>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Customer Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customer_name"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/mac_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="MAC Address"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/mobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Mobile No"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/other_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Others Mobile Number"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/nationalID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/bloodSpinner"
+                android:layout_alignLeft="@+id/bloodSpinner"
+                android:layout_alignRight="@+id/bloodSpinner"
+                android:layout_alignStart="@+id/bloodSpinner"
+                android:layout_below="@+id/bloodSpinner"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="NID"
+                android:inputType="text|number"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/mobileNumber"
+                android:layout_alignLeft="@+id/mobileNumber"
+                android:layout_alignRight="@+id/mobileNumber"
+                android:layout_alignStart="@+id/mobileNumber"
+                android:layout_below="@+id/other_phone"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="6dp"
+                android:text="Blood Group"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/bloodSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/mobileNumber"
+                android:layout_alignLeft="@+id/textView6"
+                android:layout_alignRight="@+id/mobileNumber"
+                android:layout_alignStart="@+id/textView6"
+                android:layout_below="@+id/textView6"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/selectProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/nationalID"
+                android:layout_alignLeft="@+id/nationalID"
+                android:layout_alignRight="@+id/nationalID"
+                android:layout_alignStart="@+id/nationalID"
+                android:layout_below="@+id/nationalID"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Select Profile"
+                android:padding="10dp"
+                android:textColor="#22A269"
+                android:textStyle="bold"
+                android:editable="false"
+                android:clickable="true"/>
+
+            <EditText
+                android:id="@+id/mikrotikPass"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignEnd="@+id/selectProfile"
+                android:layout_alignLeft="@+id/selectProfile"
+                android:layout_alignRight="@+id/selectProfile"
+                android:layout_alignStart="@+id/selectProfile"
+                android:layout_below="@+id/selectProfile"
+                android:layout_marginTop="5dp"
+                android:hint="Mikrotik Password"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignEnd="@+id/bilingPerson"
+                android:layout_alignLeft="@+id/bilingPerson"
+                android:layout_alignRight="@+id/bilingPerson"
+                android:layout_alignStart="@+id/bilingPerson"
+                android:layout_below="@+id/mikrotikPass"
+                android:layout_marginTop="5dp"
+                android:layout_toStartOf="@+id/billingPersonId"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="top"
+                android:hint="Address"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/bilingPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="10dp"
+                android:text="Select Billing Person"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/billingPersonId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bilingPerson"
+                android:layout_alignBottom="@+id/bilingPerson"
+                android:layout_alignEnd="@+id/bilingPerson"
+                android:layout_alignRight="@+id/bilingPerson"
+                android:padding="5dp" />
+
+
+            <TextView
+                android:id="@+id/zone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/address"
+                android:layout_alignLeft="@+id/address"
+                android:layout_alignRight="@+id/address"
+                android:layout_alignStart="@+id/address"
+                android:layout_below="@+id/bilingPerson"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="10dp"
+                android:paddingTop="2dp"
+                android:text="Zone"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/zoneId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/zone"
+                android:layout_alignBottom="@+id/zone"
+                android:layout_alignEnd="@+id/zone"
+                android:layout_alignRight="@+id/zone"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/datePicker"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="2dp"
+                    app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    android:id="@+id/timeDisp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zone"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="10dp"
+                    android:hint="Connection Date"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/runningMthAmt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/spinnerStatus"
+                android:layout_alignStart="@+id/spinnerStatus"
+                android:layout_below="@+id/spinnerStatus"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Running Month Amount"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBoxRun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/connectChargeAmt"
+                    android:layout_below="@+id/spinnerStatus"
+                    android:layout_toEndOf="@+id/runningMthAmt"
+                    android:layout_toRightOf="@+id/runningMthAmt"
+                    android:text="Due" />
+
+                <EditText
+                    android:id="@+id/dueRun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/runningMthAmt"
+                    android:layout_alignEnd="@+id/spinnerStatus"
+                    android:layout_alignRight="@+id/spinnerStatus"
+                    android:layout_below="@+id/spinnerStatus"
+                    android:layout_toRightOf="@+id/checkBoxRun"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/connectChargeAmt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/runningMthAmt"
+                android:layout_alignStart="@+id/runningMthAmt"
+                android:layout_below="@+id/runningMthAmt"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Connection Charge"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBoxCharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/connectChargeAmt"
+                    android:layout_alignTop="@+id/connectChargeAmt"
+                    android:layout_toEndOf="@+id/connectChargeAmt"
+                    android:layout_toRightOf="@+id/connectChargeAmt"
+                    android:text="Due" />
+
+                <EditText
+                    android:id="@+id/dueCharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/checkBoxCharge"
+                    android:layout_alignEnd="@+id/dueRun"
+                    android:layout_alignRight="@+id/dueRun"
+                    android:layout_alignTop="@+id/checkBoxCharge"
+                    android:layout_toRightOf="@+id/checkBoxCharge"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/bill_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeDisp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Bill Date"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/billAmt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/speed"
+                android:layout_alignLeft="@+id/speed"
+                android:layout_alignRight="@+id/speed"
+                android:layout_alignStart="@+id/speed"
+                android:layout_below="@+id/bill_date"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Bill Amount"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/timeDisp"
+                android:layout_alignLeft="@+id/timeDisp"
+                android:layout_alignRight="@+id/timeDisp"
+                android:layout_alignStart="@+id/timeDisp"
+                android:layout_below="@+id/billAmt"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Speed"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ipAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/speed"
+                android:layout_alignLeft="@+id/speed"
+                android:layout_alignRight="@+id/speed"
+                android:layout_alignStart="@+id/speed"
+                android:layout_below="@+id/speed"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Client IP"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ipAddress"
+                android:layout_alignLeft="@+id/ipAddress"
+                android:layout_alignRight="@+id/ipAddress"
+                android:layout_alignStart="@+id/ipAddress"
+                android:layout_below="@+id/ipAddress"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="6dp"
+                android:text="Status"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView8"
+                android:layout_alignLeft="@+id/ipAddress"
+                android:layout_alignRight="@+id/textView8"
+                android:layout_alignStart="@+id/ipAddress"
+                android:layout_below="@+id/textView8"
+                android:layout_marginBottom="10dp" />
+
+            <CheckBox
+                android:id="@+id/smsNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView13"
+                android:layout_alignEnd="@+id/dueCharge"
+                android:layout_alignRight="@+id/dueCharge"
+                android:layout_below="@+id/dueCharge"
+                android:layout_toRightOf="@+id/imageView13"
+                android:fontFamily="sans-serif-condensed"
+                android:text="SMS Notification"
+                android:textSize="18sp" />
+
+
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/connectChargeAmt"
+                android:layout_alignStart="@+id/connectChargeAmt"
+                android:layout_below="@+id/imageView13"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_shadow"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:layout_alignRight="@+id/smsNotification"
+                android:layout_alignEnd="@+id/smsNotification" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

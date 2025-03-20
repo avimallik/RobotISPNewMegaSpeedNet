@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/white"
+                android:drawableRight="@drawable/serach_agent_ico_white"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/abeezee"
+                android:hint="Search Zone"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color"
+                android:layout_weight="20"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_zone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
