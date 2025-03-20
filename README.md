@@ -7,7 +7,7 @@ administrators, line technicians, and employees, streamlining daily operations b
 With its extensive features, Robot ISP ensures efficient task management, enhancing productivity and service quality. 
 
 # Features (Mega Speed Net)
-1. User-Friendly Customer & Agent Management : Create and manage customers and agents seamlessly in a single, intuitive form.
+1. User-Friendly Customer & Agent Management : Create and manage customers and agents seamlessly in a single, intuitive form, extensive view of customer information
 2. Comprehensive Complaint Handling : View detailed customer complaints, update complaint statuses, and submit new complaints effortlessly.
 4. Payment Management & Receipt Generation : View and update customer payments, generate detailed payment receipts, and print them using a POS printer.
 5. Automated SMS Notifications : Send instant payment confirmation messages to customers' mobile numbers upon successful transactions.
